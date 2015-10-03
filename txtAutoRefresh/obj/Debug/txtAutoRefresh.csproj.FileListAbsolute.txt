@@ -1,9 +1,0 @@
-c:\users\soulslayer\documents\visual studio 2015\Projects\txtAutoRefresh\txtAutoRefresh\bin\Debug\txtAutoRefresh.exe.config
-c:\users\soulslayer\documents\visual studio 2015\Projects\txtAutoRefresh\txtAutoRefresh\bin\Debug\txtAutoRefresh.exe
-c:\users\soulslayer\documents\visual studio 2015\Projects\txtAutoRefresh\txtAutoRefresh\bin\Debug\txtAutoRefresh.pdb
-c:\users\soulslayer\documents\visual studio 2015\Projects\txtAutoRefresh\txtAutoRefresh\obj\Debug\txtAutoRefresh.Form1.resources
-c:\users\soulslayer\documents\visual studio 2015\Projects\txtAutoRefresh\txtAutoRefresh\obj\Debug\txtAutoRefresh.Properties.Resources.resources
-c:\users\soulslayer\documents\visual studio 2015\Projects\txtAutoRefresh\txtAutoRefresh\obj\Debug\txtAutoRefresh.csproj.GenerateResource.Cache
-c:\users\soulslayer\documents\visual studio 2015\Projects\txtAutoRefresh\txtAutoRefresh\obj\Debug\txtAutoRefresh.exe
-c:\users\soulslayer\documents\visual studio 2015\Projects\txtAutoRefresh\txtAutoRefresh\obj\Debug\txtAutoRefresh.pdb
-C:\Users\SouLSLayeR\Documents\Visual Studio 2015\Projects\txtAutoRefresh\txtAutoRefresh\obj\Debug\txtAutoRefresh.csprojResolveAssemblyReference.cache
