@@ -7,3 +7,12 @@ c:\users\soulslayer\documents\visual studio 2015\Projects\txtAutoRefresh\txtAuto
 c:\users\soulslayer\documents\visual studio 2015\Projects\txtAutoRefresh\txtAutoRefresh\obj\Debug\txtAutoRefresh.exe
 c:\users\soulslayer\documents\visual studio 2015\Projects\txtAutoRefresh\txtAutoRefresh\obj\Debug\txtAutoRefresh.pdb
 C:\Users\SouLSLayeR\Documents\Visual Studio 2015\Projects\txtAutoRefresh\txtAutoRefresh\obj\Debug\txtAutoRefresh.csprojResolveAssemblyReference.cache
+E:\WORK\Visual Studio\Projects\txtAutoRefresh\txtAutoRefresh\bin\Debug\txtAutoRefresh.exe.config
+E:\WORK\Visual Studio\Projects\txtAutoRefresh\txtAutoRefresh\obj\Debug\txtAutoRefresh.exe
+E:\WORK\Visual Studio\Projects\txtAutoRefresh\txtAutoRefresh\obj\Debug\txtAutoRefresh.pdb
+E:\WORK\Visual Studio\Projects\txtAutoRefresh\txtAutoRefresh\bin\Debug\txtAutoRefresh.exe
+E:\WORK\Visual Studio\Projects\txtAutoRefresh\txtAutoRefresh\bin\Debug\txtAutoRefresh.pdb
+E:\WORK\Visual Studio\Projects\txtAutoRefresh\txtAutoRefresh\obj\Debug\txtAutoRefresh.csprojResolveAssemblyReference.cache
+E:\WORK\Visual Studio\Projects\txtAutoRefresh\txtAutoRefresh\obj\Debug\txtAutoRefresh.Form1.resources
+E:\WORK\Visual Studio\Projects\txtAutoRefresh\txtAutoRefresh\obj\Debug\txtAutoRefresh.Properties.Resources.resources
+E:\WORK\Visual Studio\Projects\txtAutoRefresh\txtAutoRefresh\obj\Debug\txtAutoRefresh.csproj.GenerateResource.Cache

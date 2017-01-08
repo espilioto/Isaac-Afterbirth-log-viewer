@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnStart = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnStop = new System.Windows.Forms.Button();
@@ -37,15 +36,10 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnScan = new System.Windows.Forms.Button();
-            this.txtScan = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.txtScan = new System.Windows.Forms.RichTextBox();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // btnStart
             // 
@@ -112,16 +106,22 @@
             this.btnScan.UseVisualStyleBackColor = true;
             this.btnScan.Click += new System.EventHandler(this.btnScan_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 16;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // txtScan
             // 
             this.txtScan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtScan.Location = new System.Drawing.Point(366, 41);
-            this.txtScan.Multiline = true;
+            this.txtScan.Location = new System.Drawing.Point(360, 41);
             this.txtScan.Name = "txtScan";
-            this.txtScan.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtScan.Size = new System.Drawing.Size(342, 325);
+            this.txtScan.Size = new System.Drawing.Size(348, 325);
             this.txtScan.TabIndex = 7;
+            this.txtScan.Text = "";
+            this.txtScan.TextChanged += new System.EventHandler(this.txtScan_TextChanged);
             // 
             // Form1
             // 
@@ -145,7 +145,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnStop;
@@ -153,7 +152,8 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnScan;
-        private System.Windows.Forms.TextBox txtScan;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.RichTextBox txtScan;
     }
 }
 
