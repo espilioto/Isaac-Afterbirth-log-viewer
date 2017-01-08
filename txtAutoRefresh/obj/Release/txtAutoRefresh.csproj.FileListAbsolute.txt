@@ -1,0 +1,9 @@
+C:\Users\SouLSLayeR\Documents\Visual Studio 2015\Projects\txtAutoRefresh\txtAutoRefresh\bin\Release\txtAutoRefresh.exe.config
+C:\Users\SouLSLayeR\Documents\Visual Studio 2015\Projects\txtAutoRefresh\txtAutoRefresh\bin\Release\txtAutoRefresh.exe
+C:\Users\SouLSLayeR\Documents\Visual Studio 2015\Projects\txtAutoRefresh\txtAutoRefresh\bin\Release\txtAutoRefresh.pdb
+C:\Users\SouLSLayeR\Documents\Visual Studio 2015\Projects\txtAutoRefresh\txtAutoRefresh\obj\Release\txtAutoRefresh.Form1.resources
+C:\Users\SouLSLayeR\Documents\Visual Studio 2015\Projects\txtAutoRefresh\txtAutoRefresh\obj\Release\txtAutoRefresh.Properties.Resources.resources
+C:\Users\SouLSLayeR\Documents\Visual Studio 2015\Projects\txtAutoRefresh\txtAutoRefresh\obj\Release\txtAutoRefresh.csproj.GenerateResource.Cache
+C:\Users\SouLSLayeR\Documents\Visual Studio 2015\Projects\txtAutoRefresh\txtAutoRefresh\obj\Release\txtAutoRefresh.exe
+C:\Users\SouLSLayeR\Documents\Visual Studio 2015\Projects\txtAutoRefresh\txtAutoRefresh\obj\Release\txtAutoRefresh.pdb
+C:\Users\SouLSLayeR\Documents\Visual Studio 2015\Projects\txtAutoRefresh\txtAutoRefresh\obj\Release\txtAutoRefresh.csprojResolveAssemblyReference.cache
