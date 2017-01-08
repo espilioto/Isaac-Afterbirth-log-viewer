@@ -140,125 +140,125 @@ namespace txtAutoRefresh
 
                             if (stage == "1" && altStage == "0")                                                //chapter 1
                             {
-                                txtScan.AppendText("Basement I" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Basement I" + Environment.NewLine);
                             }
                             else if (stage == "1" && altStage == "1")
                             {
-                                txtScan.AppendText("Cellar I" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Cellar I" + Environment.NewLine);
                             }
                             else if (stage == "1" && altStage == "2")
                             {
-                                txtScan.AppendText("Burning Basement II" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Burning Basement II" + Environment.NewLine);
                             }
                             else if (stage == "2" && altStage == "0")
                             {
-                                txtScan.AppendText("Basement II" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Basement II" + Environment.NewLine);
                             }
                             else if (stage == "2" && altStage == "1")
                             {
-                                txtScan.AppendText("Cellar II" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Cellar II" + Environment.NewLine);
                             }
                             else if (stage == "2" && altStage == "2")
                             {
-                                txtScan.AppendText("Burning Basement II" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Burning Basement II" + Environment.NewLine);
                             }
 
                             else if (stage == "3" && altStage == "0")                                            //chapter 2
                             {
-                                txtScan.AppendText("Caves I" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Caves I" + Environment.NewLine);
                             }
                             else if (stage == "3" && altStage == "1")
                             {
-                                txtScan.AppendText("Catacombs I" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Catacombs I" + Environment.NewLine);
                             }
                             else if (stage == "3" && altStage == "2")
                             {
-                                txtScan.AppendText("Flooded Caves I" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Flooded Caves I" + Environment.NewLine);
                             }
                             else if (stage == "4" && altStage == "0")
                             {
-                                txtScan.AppendText("Caves II" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Caves II" + Environment.NewLine);
                             }
                             else if (stage == "4" && altStage == "1")
                             {
-                                txtScan.AppendText("Catacombs II" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Catacombs II" + Environment.NewLine);
                             }
                             else if (stage == "4" && altStage == "2")
                             {
-                                txtScan.AppendText("Flooded Caves II" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Flooded Caves II" + Environment.NewLine);
                             }
 
                             else if (stage == "5" && altStage == "0")                                            //chapter 3
                             {
-                                txtScan.AppendText("Depths I" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Depths I" + Environment.NewLine);
                             }
                             else if (stage == "5" && altStage == "1")
                             {
-                                txtScan.AppendText("Necropolis I" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Necropolis I" + Environment.NewLine);
                             }
                             else if (stage == "5" && altStage == "2")
                             {
-                                txtScan.AppendText("Dank Depths I" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Dank Depths I" + Environment.NewLine);
                             }
                             else if (stage == "6" && altStage == "0")
                             {
-                                txtScan.AppendText("Depths II" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Depths II" + Environment.NewLine);
                             }
                             else if (stage == "6" && altStage == "1")
                             {
-                                txtScan.AppendText("Necropolis II" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Necropolis II" + Environment.NewLine);
                             }
                             else if (stage == "6" && altStage == "2")
                             {
-                                txtScan.AppendText("Dank Depths II" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Dank Depths II" + Environment.NewLine);
                             }
 
                             else if (stage == "7" && altStage == "0")                                            //chapter 4
                             {
-                                txtScan.AppendText("Womb I" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Womb I" + Environment.NewLine);
                             }
                             else if (stage == "7" && altStage == "1")
                             {
-                                txtScan.AppendText("Utero I" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Utero I" + Environment.NewLine);
                             }
                             else if (stage == "7" && altStage == "2")
                             {
-                                txtScan.AppendText("Scarred Womb  I" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Scarred Womb  I" + Environment.NewLine);
                             }
                             else if (stage == "8" && altStage == "0")
                             {
-                                txtScan.AppendText("Womb II" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Womb II" + Environment.NewLine);
                             }
                             else if (stage == "8" && altStage == "1")
                             {
-                                txtScan.AppendText("Utero II" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Utero II" + Environment.NewLine);
                             }
                             else if (stage == "8" && altStage == "2")
                             {
-                                txtScan.AppendText("Scarred Womb  II" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Scarred Womb  II" + Environment.NewLine);
                             }
 
                             else if (stage == "9" && altStage == "0")
                             {
-                                txtScan.AppendText("???" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: ???" + Environment.NewLine);
                             }
 
                             else if (stage == "10" && altStage == "0")                                            //chapter 5
                             {
-                                txtScan.AppendText("Sheol" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Sheol" + Environment.NewLine);
                             }
                             else if (stage == "10" && altStage == "1")
                             {
-                                txtScan.AppendText("Cathedral" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Cathedral" + Environment.NewLine);
                             }
 
                             else if (stage == "11" && altStage == "0")                                           //chapter 6
                             {
-                                txtScan.AppendText("Dark Room" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Dark Room" + Environment.NewLine);
                             }
                             else if (stage == "11" && altStage == "1")
                             {
-                                txtScan.AppendText("Chest" + Environment.NewLine);
+                                txtScan.AppendText("--: Stage: Chest" + Environment.NewLine);
                             }
                         }
                         if (line.StartsWith("[INFO] - Adding collectible ")) //regex returns the text inside the parentheses (item name)
@@ -392,125 +392,125 @@ namespace txtAutoRefresh
 
                         if (stage == "1" && altStage == "0")                                                //chapter 1
                         {
-                            txtScan.AppendText("Basement I" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Basement I" + Environment.NewLine);
                         }
                         else if (stage == "1" && altStage == "1")
                         {
-                            txtScan.AppendText("Cellar I" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Cellar I" + Environment.NewLine);
                         }
                         else if (stage == "1" && altStage == "2")
                         {
-                            txtScan.AppendText("Burning Basement II" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Burning Basement II" + Environment.NewLine);
                         }
                         else if (stage == "2" && altStage == "0")
                         {
-                            txtScan.AppendText("Basement II" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Basement II" + Environment.NewLine);
                         }
                         else if (stage == "2" && altStage == "1")
                         {
-                            txtScan.AppendText("Cellar II" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Cellar II" + Environment.NewLine);
                         }
                         else if (stage == "2" && altStage == "2")
                         {
-                            txtScan.AppendText("Burning Basement II" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Burning Basement II" + Environment.NewLine);
                         }
 
                         else if (stage == "3" && altStage == "0")                                            //chapter 2
                         {
-                            txtScan.AppendText("Caves I" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Caves I" + Environment.NewLine);
                         }
                         else if (stage == "3" && altStage == "1")
                         {
-                            txtScan.AppendText("Catacombs I" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Catacombs I" + Environment.NewLine);
                         }
                         else if (stage == "3" && altStage == "2")
                         {
-                            txtScan.AppendText("Flooded Caves I" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Flooded Caves I" + Environment.NewLine);
                         }
                         else if (stage == "4" && altStage == "0")
                         {
-                            txtScan.AppendText("Caves II" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Caves II" + Environment.NewLine);
                         }
                         else if (stage == "4" && altStage == "1")
                         {
-                            txtScan.AppendText("Catacombs II" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Catacombs II" + Environment.NewLine);
                         }
                         else if (stage == "4" && altStage == "2")
                         {
-                            txtScan.AppendText("Flooded Caves II" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Flooded Caves II" + Environment.NewLine);
                         }
 
                         else if (stage == "5" && altStage == "0")                                            //chapter 3
                         {
-                            txtScan.AppendText("Depths I" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Depths I" + Environment.NewLine);
                         }
                         else if (stage == "5" && altStage == "1")
                         {
-                            txtScan.AppendText("Necropolis I" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Necropolis I" + Environment.NewLine);
                         }
                         else if (stage == "5" && altStage == "2")
                         {
-                            txtScan.AppendText("Dank Depths I" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Dank Depths I" + Environment.NewLine);
                         }
                         else if (stage == "6" && altStage == "0")
                         {
-                            txtScan.AppendText("Depths II" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Depths II" + Environment.NewLine);
                         }
                         else if (stage == "6" && altStage == "1")
                         {
-                            txtScan.AppendText("Necropolis II" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Necropolis II" + Environment.NewLine);
                         }
                         else if (stage == "6" && altStage == "2")
                         {
-                            txtScan.AppendText("Dank Depths II" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Dank Depths II" + Environment.NewLine);
                         }
 
                         else if (stage == "7" && altStage == "0")                                            //chapter 4
                         {
-                            txtScan.AppendText("Womb I" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Womb I" + Environment.NewLine);
                         }
                         else if (stage == "7" && altStage == "1")
                         {
-                            txtScan.AppendText("Utero I" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Utero I" + Environment.NewLine);
                         }
                         else if (stage == "7" && altStage == "2")
                         {
-                            txtScan.AppendText("Scarred Womb  I" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Scarred Womb  I" + Environment.NewLine);
                         }
                         else if (stage == "8" && altStage == "0")
                         {
-                            txtScan.AppendText("Womb II" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Womb II" + Environment.NewLine);
                         }
                         else if (stage == "8" && altStage == "1")
                         {
-                            txtScan.AppendText("Utero II" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Utero II" + Environment.NewLine);
                         }
                         else if (stage == "8" && altStage == "2")
                         {
-                            txtScan.AppendText("Scarred Womb  II" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Scarred Womb  II" + Environment.NewLine);
                         }
 
                         else if (stage == "9" && altStage == "0")
                         {
-                            txtScan.AppendText("???" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: ???" + Environment.NewLine);
                         }
 
                         else if (stage == "10" && altStage == "0")                                            //chapter 5
                         {
-                            txtScan.AppendText("Sheol" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Sheol" + Environment.NewLine);
                         }
                         else if (stage == "10" && altStage == "1")
                         {
-                            txtScan.AppendText("Cathedral" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Cathedral" + Environment.NewLine);
                         }
 
                         else if (stage == "11" && altStage == "0")                                           //chapter 6
                         {
-                            txtScan.AppendText("Dark Room" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Dark Room" + Environment.NewLine);
                         }
                         else if (stage == "11" && altStage == "1")
                         {
-                            txtScan.AppendText("Chest" + Environment.NewLine);
+                            txtScan.AppendText("--: Stage: Chest" + Environment.NewLine);
                         }
                     }
                     if (line.StartsWith("[INFO] - Adding collectible ")) //regex returns the text inside the parentheses (item name)
