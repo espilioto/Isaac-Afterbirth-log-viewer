@@ -78,7 +78,55 @@ namespace txtAutoRefresh
                         }
                         if (line.StartsWith("[INFO] - Initialized player with"))
                         {
-                            txtScan.AppendText("--: Char: " + Regex.Match(line, @"Subtype (\d+)").Groups[1].Value + Environment.NewLine);
+                            var character = Regex.Match(line, @"Subtype (\d+)").Groups[1].Value;
+
+                            switch (character)
+                            {
+                                case "0":
+                                    txtScan.AppendText("--: Char: Isaac" + Environment.NewLine);
+                                    break;
+                                case "1":
+                                    txtScan.AppendText("--: Char: Magdalene" + Environment.NewLine);
+                                    break;
+                                case "2":
+                                    txtScan.AppendText("--: Char: Cain" + Environment.NewLine);
+                                    break;
+                                case "3":
+                                    txtScan.AppendText("--: Char: Judas" + Environment.NewLine);
+                                    break;
+                                case "4":
+                                    txtScan.AppendText("--: Char: ???" + Environment.NewLine);
+                                    break;
+                                case "5":
+                                    txtScan.AppendText("--: Char: Eve" + Environment.NewLine);
+                                    break;
+                                case "6":
+                                    txtScan.AppendText("--: Char: Samson" + Environment.NewLine);
+                                    break;
+                                case "7":
+                                    txtScan.AppendText("--: Char: Azazel" + Environment.NewLine);
+                                    break;
+                                case "8":
+                                    txtScan.AppendText("--: Char: Lazarus" + Environment.NewLine);
+                                    break;
+                                case "9":
+                                    txtScan.AppendText("--: Char: Eden" + Environment.NewLine);
+                                    break;
+                                case "10":
+                                    txtScan.AppendText("--: Char: The Lost" + Environment.NewLine);
+                                    break;
+                                case "11":
+                                    txtScan.AppendText("--: Char: Lilith" + Environment.NewLine);
+                                    break;
+                                case "12":
+                                    txtScan.AppendText("--: Char: Keeper" + Environment.NewLine);
+                                    break;
+                                case "15":
+                                    txtScan.AppendText("--: Char: Apollyon" + Environment.NewLine);
+                                    break;
+                                default:
+                                    break;
+                            }
                         }
                         else if (line.StartsWith("[INFO] - Level::Init"))
                         {
@@ -282,7 +330,55 @@ namespace txtAutoRefresh
                     }
                     if (line.StartsWith("[INFO] - Initialized player with"))
                     {
-                        txtScan.AppendText("--: Char: " + Regex.Match(line, @"Subtype (\d+)").Groups[1].Value + Environment.NewLine);
+                        var character = Regex.Match(line, @"Subtype (\d+)").Groups[1].Value;
+
+                        switch (character)
+                        {
+                            case "0":
+                                txtScan.AppendText("--: Char: Isaac");
+                                break;
+                            case "1":
+                                txtScan.AppendText("--: Char: Magdalene");
+                                break;
+                            case "2":
+                                txtScan.AppendText("--: Char: Cain");
+                                break;
+                            case "3":
+                                txtScan.AppendText("--: Char: Judas");
+                                break;
+                            case "4":
+                                txtScan.AppendText("--: Char: ???");
+                                break;
+                            case "5":
+                                txtScan.AppendText("--: Char: Eve");
+                                break;
+                            case "6":
+                                txtScan.AppendText("--: Char: Samson");
+                                break;
+                            case "7":
+                                txtScan.AppendText("--: Char: Azazel");
+                                break;
+                            case "8":
+                                txtScan.AppendText("--: Char: Lazarus");
+                                break;
+                            case "9":
+                                txtScan.AppendText("--: Char: Eden");
+                                break;
+                            case "10":
+                                txtScan.AppendText("--: Char: The Lost");
+                                break;
+                            case "11":
+                                txtScan.AppendText("--: Char: Lilith");
+                                break;
+                            case "12":
+                                txtScan.AppendText("--: Char: Keeper");
+                                break;
+                            case "15":
+                                txtScan.AppendText("--: Char: Apollyon");
+                                break;
+                            default:
+                                break;
+                        }
                     }
                     else if (line.StartsWith("[INFO] - Level::Init"))
                     {
