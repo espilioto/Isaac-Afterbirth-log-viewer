@@ -267,27 +267,27 @@ namespace txtAutoRefresh
 
                             if (line.Contains("Maze"))
                             {
-                                txtScan.AppendText("Curse of the Maze");
+                                txtScan.AppendText("Curse of the Maze" + Environment.NewLine);
                             }
                             else if (line.Contains("Blind"))
                             {
-                                txtScan.AppendText("Curse of the Blind");
+                                txtScan.AppendText("Curse of the Blind" + Environment.NewLine);
                             }
                             else if (line.Contains("Lost"))
                             {
-                                txtScan.AppendText("Curse of the Lost!");
+                                txtScan.AppendText("Curse of the Lost!" + Environment.NewLine);
                             }
                             else if (line.Contains("Unknown"))
                             {
-                                txtScan.AppendText("Curse of the Unknown");
+                                txtScan.AppendText("Curse of the Unknown" + Environment.NewLine);
                             }
                             else if (line.Contains("Darkness"))
                             {
-                                txtScan.AppendText("Curse of Darkness");
+                                txtScan.AppendText("Curse of Darkness" + Environment.NewLine);
                             }
                             else if (line.Contains("Labyrinth"))                                        //if it's an XL floor
                             {
-                                txtScan.AppendText("Curse of the Labyrinth");
+                                txtScan.AppendText("Curse of the Labyrinth" + Environment.NewLine);
                             }
                         }
                         if (line.StartsWith("[INFO] - Adding collectible ")) //regex returns the text inside the parentheses (item name)
@@ -300,7 +300,7 @@ namespace txtAutoRefresh
                         }
                         if (line.StartsWith("[INFO] - playing cutscene"))
                         {
-                            if (line.StartsWith("playing cutscene 1 (Intro).")) //don't match the intro cutscene that plays on every launch
+                            if (line.StartsWith("[INFO] - playing cutscene 1 (Intro).")) //don't match the intro cutscene that plays on every launch
                             {
                                 ; ;
                             }
