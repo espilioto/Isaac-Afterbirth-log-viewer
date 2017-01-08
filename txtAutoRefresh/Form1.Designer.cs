@@ -37,14 +37,14 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnScan = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.txtScan = new System.Windows.Forms.RichTextBox();
+            this.txtScan = new System.Windows.Forms.ListView();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnStart
             // 
             this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnStart.Location = new System.Drawing.Point(552, 12);
+            this.btnStart.Location = new System.Drawing.Point(552, 10);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 2;
@@ -59,7 +59,7 @@
             // btnStop
             // 
             this.btnStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnStop.Location = new System.Drawing.Point(633, 12);
+            this.btnStop.Location = new System.Drawing.Point(633, 10);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(75, 23);
             this.btnStop.TabIndex = 3;
@@ -89,16 +89,18 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(12, 41);
+            this.textBox1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox1.Location = new System.Drawing.Point(12, 38);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(342, 325);
+            this.textBox1.Size = new System.Drawing.Size(342, 328);
             this.textBox1.TabIndex = 5;
             // 
             // btnScan
             // 
-            this.btnScan.Location = new System.Drawing.Point(12, 12);
+            this.btnScan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnScan.Location = new System.Drawing.Point(471, 10);
             this.btnScan.Name = "btnScan";
             this.btnScan.Size = new System.Drawing.Size(75, 23);
             this.btnScan.TabIndex = 6;
@@ -114,14 +116,18 @@
             // 
             // txtScan
             // 
+            this.txtScan.Alignment = System.Windows.Forms.ListViewAlignment.Default;
+            this.txtScan.AllowDrop = true;
             this.txtScan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtScan.Location = new System.Drawing.Point(360, 41);
+            this.txtScan.BackColor = System.Drawing.SystemColors.Window;
+            this.txtScan.Location = new System.Drawing.Point(360, 39);
+            this.txtScan.MultiSelect = false;
             this.txtScan.Name = "txtScan";
-            this.txtScan.Size = new System.Drawing.Size(348, 325);
+            this.txtScan.Size = new System.Drawing.Size(348, 327);
             this.txtScan.TabIndex = 7;
-            this.txtScan.Text = "";
-            this.txtScan.TextChanged += new System.EventHandler(this.txtScan_TextChanged);
+            this.txtScan.UseCompatibleStateImageBehavior = false;
+            this.txtScan.View = System.Windows.Forms.View.Details;
             // 
             // Form1
             // 
@@ -153,7 +159,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnScan;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.RichTextBox txtScan;
+        private System.Windows.Forms.ListView txtScan;
     }
 }
 
