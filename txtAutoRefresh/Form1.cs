@@ -32,8 +32,8 @@ namespace txtAutoRefresh
             timer1.Stop();
 
             openFileDialog1.FileName = "log.txt";
-            openFileDialog1.Filter = "Text Files | *.txt*";
-            openFileDialog1.Title = "Please locate the file you want to open";
+            openFileDialog1.Filter = "Isaac log file | *.txt";
+            openFileDialog1.Title = "Please locate the log file";
 
             if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
             {
@@ -261,10 +261,38 @@ namespace txtAutoRefresh
                                 txtScan.AppendText("--: Stage: Chest" + Environment.NewLine);
                             }
                         }
+                        if (line.StartsWith("[INFO] - Curse of"))
+                        {
+                            string curse = string.Empty;
+
+                            if (line.Contains("Maze"))
+                            {
+                                txtScan.AppendText("Curse of the Maze");
+                            }
+                            else if (line.Contains("Blind"))
+                            {
+                                txtScan.AppendText("Curse of the Blind");
+                            }
+                            else if (line.Contains("Lost"))
+                            {
+                                txtScan.AppendText("Curse of the Lost!");
+                            }
+                            else if (line.Contains("Unknown"))
+                            {
+                                txtScan.AppendText("Curse of the Unknown");
+                            }
+                            else if (line.Contains("Darkness"))
+                            {
+                                txtScan.AppendText("Curse of Darkness");
+                            }
+                            else if (line.Contains("Labyrinth"))                                        //if it's an XL floor
+                            {
+                                txtScan.AppendText("Curse of the Labyrinth");
+                            }
+                        }
                         if (line.StartsWith("[INFO] - Adding collectible ")) //regex returns the text inside the parentheses (item name)
                         {
-                            txtScan.AppendText("+I: " + (Regex.Match(line, @"\(([^)]*)\)").Groups[1].Value) + Environment.NewLine); //item name
-                            //txtScan.AppendText("+I: " + (Regex.Match(line, @"(\d+)").Groups[1].Value) + Environment.NewLine);     //item id
+                            txtScan.AppendText("+Item: " + (Regex.Match(line, @"\(([^)]*)\)").Groups[1].Value) + " (ID: " + (Regex.Match(line, @"(\d+)").Groups[1].Value) + ")" + Environment.NewLine);     //item id
                         }
                         if (line.StartsWith("[INFO] - Game Over"))
                         {
@@ -283,7 +311,7 @@ namespace txtAutoRefresh
                         }
                         if (Regex.Match(line, (@"Room \d\.\d{4}\(")).Success) //regex returns the boss name
                         {
-                            txtScan.AppendText("+B: " + (Regex.Match(line, @"\(([^(]+)").Groups[1].Value.Trim(')')) + Environment.NewLine);
+                            txtScan.AppendText("+Boss: " + (Regex.Match(line, @"\(([^(]+)").Groups[1].Value.Trim(')')) + Environment.NewLine);
                         }
                     }
                 }
@@ -316,237 +344,9 @@ namespace txtAutoRefresh
         {
             var file = new StreamReader(fileStream, Encoding.UTF8, true, 128);
 
-            try
-            {
-                while ((line = file.ReadLine()) != null)
-                {
-                    if (line.StartsWith("[INFO] - RNG Start Seed:")) //regex returns the seed in this form: ((a-Z 0-9)x4)space((a-Z 0-9)x4)
-                    {
-                        if (txtScan.Lines.Count() > 0)
-                        {
-                            txtScan.AppendText(Environment.NewLine);
-                        }
-                        txtScan.AppendText(Environment.NewLine + "- - - - - - - - - - - New run: " + Regex.Match(line, @" (\w{4} \w{4}) ").Groups[1].Value + Environment.NewLine);
-                    }
-                    if (line.StartsWith("[INFO] - Initialized player with"))
-                    {
-                        var character = Regex.Match(line, @"Subtype (\d+)").Groups[1].Value;
+            timer1_Tick(this, null);
 
-                        switch (character)
-                        {
-                            case "0":
-                                txtScan.AppendText("--: Char: Isaac");
-                                break;
-                            case "1":
-                                txtScan.AppendText("--: Char: Magdalene");
-                                break;
-                            case "2":
-                                txtScan.AppendText("--: Char: Cain");
-                                break;
-                            case "3":
-                                txtScan.AppendText("--: Char: Judas");
-                                break;
-                            case "4":
-                                txtScan.AppendText("--: Char: ???");
-                                break;
-                            case "5":
-                                txtScan.AppendText("--: Char: Eve");
-                                break;
-                            case "6":
-                                txtScan.AppendText("--: Char: Samson");
-                                break;
-                            case "7":
-                                txtScan.AppendText("--: Char: Azazel");
-                                break;
-                            case "8":
-                                txtScan.AppendText("--: Char: Lazarus");
-                                break;
-                            case "9":
-                                txtScan.AppendText("--: Char: Eden");
-                                break;
-                            case "10":
-                                txtScan.AppendText("--: Char: The Lost");
-                                break;
-                            case "11":
-                                txtScan.AppendText("--: Char: Lilith");
-                                break;
-                            case "12":
-                                txtScan.AppendText("--: Char: Keeper");
-                                break;
-                            case "15":
-                                txtScan.AppendText("--: Char: Apollyon");
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-                    else if (line.StartsWith("[INFO] - Level::Init"))
-                    {
-                        var stage = Regex.Match(line, @"m_Stage (\d+)").Groups[1].Value;            //regex stage id
-                        var altStage = Regex.Match(line, @"m_StageType (\d+)").Groups[1].Value;      //regex alt stage id
-
-                        if (altStage == null)
-                        {
-                            altStage = Regex.Match(line, @"m_AltStage (\d+)").Groups[1].Value;      //floor detection fix for Rebirth
-                        }
-
-                        if (stage == "1" && altStage == "0")                                                //chapter 1
-                        {
-                            txtScan.AppendText("--: Stage: Basement I" + Environment.NewLine);
-                        }
-                        else if (stage == "1" && altStage == "1")
-                        {
-                            txtScan.AppendText("--: Stage: Cellar I" + Environment.NewLine);
-                        }
-                        else if (stage == "1" && altStage == "2")
-                        {
-                            txtScan.AppendText("--: Stage: Burning Basement II" + Environment.NewLine);
-                        }
-                        else if (stage == "2" && altStage == "0")
-                        {
-                            txtScan.AppendText("--: Stage: Basement II" + Environment.NewLine);
-                        }
-                        else if (stage == "2" && altStage == "1")
-                        {
-                            txtScan.AppendText("--: Stage: Cellar II" + Environment.NewLine);
-                        }
-                        else if (stage == "2" && altStage == "2")
-                        {
-                            txtScan.AppendText("--: Stage: Burning Basement II" + Environment.NewLine);
-                        }
-
-                        else if (stage == "3" && altStage == "0")                                            //chapter 2
-                        {
-                            txtScan.AppendText("--: Stage: Caves I" + Environment.NewLine);
-                        }
-                        else if (stage == "3" && altStage == "1")
-                        {
-                            txtScan.AppendText("--: Stage: Catacombs I" + Environment.NewLine);
-                        }
-                        else if (stage == "3" && altStage == "2")
-                        {
-                            txtScan.AppendText("--: Stage: Flooded Caves I" + Environment.NewLine);
-                        }
-                        else if (stage == "4" && altStage == "0")
-                        {
-                            txtScan.AppendText("--: Stage: Caves II" + Environment.NewLine);
-                        }
-                        else if (stage == "4" && altStage == "1")
-                        {
-                            txtScan.AppendText("--: Stage: Catacombs II" + Environment.NewLine);
-                        }
-                        else if (stage == "4" && altStage == "2")
-                        {
-                            txtScan.AppendText("--: Stage: Flooded Caves II" + Environment.NewLine);
-                        }
-
-                        else if (stage == "5" && altStage == "0")                                            //chapter 3
-                        {
-                            txtScan.AppendText("--: Stage: Depths I" + Environment.NewLine);
-                        }
-                        else if (stage == "5" && altStage == "1")
-                        {
-                            txtScan.AppendText("--: Stage: Necropolis I" + Environment.NewLine);
-                        }
-                        else if (stage == "5" && altStage == "2")
-                        {
-                            txtScan.AppendText("--: Stage: Dank Depths I" + Environment.NewLine);
-                        }
-                        else if (stage == "6" && altStage == "0")
-                        {
-                            txtScan.AppendText("--: Stage: Depths II" + Environment.NewLine);
-                        }
-                        else if (stage == "6" && altStage == "1")
-                        {
-                            txtScan.AppendText("--: Stage: Necropolis II" + Environment.NewLine);
-                        }
-                        else if (stage == "6" && altStage == "2")
-                        {
-                            txtScan.AppendText("--: Stage: Dank Depths II" + Environment.NewLine);
-                        }
-
-                        else if (stage == "7" && altStage == "0")                                            //chapter 4
-                        {
-                            txtScan.AppendText("--: Stage: Womb I" + Environment.NewLine);
-                        }
-                        else if (stage == "7" && altStage == "1")
-                        {
-                            txtScan.AppendText("--: Stage: Utero I" + Environment.NewLine);
-                        }
-                        else if (stage == "7" && altStage == "2")
-                        {
-                            txtScan.AppendText("--: Stage: Scarred Womb  I" + Environment.NewLine);
-                        }
-                        else if (stage == "8" && altStage == "0")
-                        {
-                            txtScan.AppendText("--: Stage: Womb II" + Environment.NewLine);
-                        }
-                        else if (stage == "8" && altStage == "1")
-                        {
-                            txtScan.AppendText("--: Stage: Utero II" + Environment.NewLine);
-                        }
-                        else if (stage == "8" && altStage == "2")
-                        {
-                            txtScan.AppendText("--: Stage: Scarred Womb  II" + Environment.NewLine);
-                        }
-
-                        else if (stage == "9" && altStage == "0")
-                        {
-                            txtScan.AppendText("--: Stage: ???" + Environment.NewLine);
-                        }
-
-                        else if (stage == "10" && altStage == "0")                                            //chapter 5
-                        {
-                            txtScan.AppendText("--: Stage: Sheol" + Environment.NewLine);
-                        }
-                        else if (stage == "10" && altStage == "1")
-                        {
-                            txtScan.AppendText("--: Stage: Cathedral" + Environment.NewLine);
-                        }
-
-                        else if (stage == "11" && altStage == "0")                                           //chapter 6
-                        {
-                            txtScan.AppendText("--: Stage: Dark Room" + Environment.NewLine);
-                        }
-                        else if (stage == "11" && altStage == "1")
-                        {
-                            txtScan.AppendText("--: Stage: Chest" + Environment.NewLine);
-                        }
-                    }
-                    if (line.StartsWith("[INFO] - Adding collectible ")) //regex returns the text inside the parentheses (item name)
-                    {
-                        txtScan.AppendText("+I: " + (Regex.Match(line, @"\(([^)]*)\)").Groups[1].Value) + Environment.NewLine); //item name
-                                                                                                                                //txtScan.AppendText("+I: " + (Regex.Match(line, @"(\d+)").Groups[1].Value) + Environment.NewLine);     //item id
-                    }
-                    if (line.StartsWith("[INFO] - Game Over"))
-                    {
-                        txtScan.AppendText("--: " + ("Game over :<") + Environment.NewLine);
-                    }
-                    if (line.StartsWith("[INFO] - playing cutscene"))
-                    {
-                        if (line.StartsWith("playing cutscene 1 (Intro).")) //don't match the intro cutscene that plays on every launch
-                        {
-                            ; ;
-                        }
-                        else
-                        {
-                            txtScan.AppendText("--: " + ("Victory!" + Environment.NewLine));
-                        }
-                    }
-                    if (Regex.Match(line, (@"Room \d\.\d{4}\(")).Success) //regex returns the boss name
-                    {
-                        txtScan.AppendText("+B: " + (Regex.Match(line, @"\(([^(]+)").Groups[1].Value.Trim(')')) + Environment.NewLine);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Data + ex.Message);
-            }
-            finally
-            {
-                file.Dispose();
-            }
+            file.Dispose();
         }
 
         private void txtScan_TextChanged(object sender, EventArgs e)
